@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#087f8c">
+  <meta name="description" content="Seu guia de viagem para Porto Seguro e Arraial d'Ajuda 2027.">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <title>Meu Guia Porto Seguro 2027</title>
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><span class="brand-icon">🌴</span><div><strong>Meu Guia</strong><small>PORTO SEGURO 2027</small></div></div>
+    <button id="installBtn" class="install-btn" hidden>＋ Instalar</button>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-shade"></div>
+      <div class="hero-copy">
+        <span class="eyebrow">07 A 14 DE JANEIRO · 2 PESSOAS</span>
+        <h1>Sua viagem,<br>do seu jeito.</h1>
+        <p>Praias incríveis, bons momentos e tudo organizado em um só lugar.</p>
+        <div class="hero-tags"><span>☀️ Verão 2027</span><span>📍 Bahia, Brasil</span></div>
+      </div>
+    </section>
+
+    <section class="budget-card">
+      <div class="budget-head"><div><span class="muted light">ORÇAMENTO PLANEJADO</span><h2 id="budgetRemaining">R$ 2.200,00</h2><small id="budgetCaption">R$ 2.200,00 disponíveis</small></div><div class="budget-emoji">💰</div></div>
+      <div class="progress"><div id="budgetProgress"></div></div>
+      <div class="budget-foot"><span>Gasto: <b id="budgetSpent">R$ 0,00</b></span><span>Meta: <b>R$ 2.200</b></span></div>
+    </section>
+
+    <nav class="tabs" aria-label="Navegação principal">
+      <button class="tab active" data-view="home">🏡<span>Início</span></button>
+      <button class="tab" data-view="itinerary">🗓️<span>Roteiro</span></button>
+      <button class="tab" data-view="stays">🛏️<span>Pousadas</span></button>
+      <button class="tab" data-view="places">📍<span>Mapa</span></button>
+      <button class="tab" data-view="expenses">💳<span>Gastos</span></button>
+    </nav>
+
+    <section id="view-home" class="view active">
+      <div class="section-title"><div><span class="eyebrow teal">SEU PLANEJAMENTO</span><h2>Visão geral</h2></div><span class="sun">🌺</span></div>
+      <div class="quick-grid">
+        <article class="quick-card coral"><span>🗓️</span><b>8 dias</b><small>07 a 14 de janeiro</small></article>
+        <article class="quick-card aqua"><span>👫</span><b>2 viajantes</b><small>Uma viagem a dois</small></article>
+        <article class="quick-card sand"><span>🏖️</span><b>2 regiões</b><small>Arraial e Porto Seguro</small></article>
+        <article class="quick-card lilac"><span>🎯</span><b>R$ 2.200</b><small>Meta de gastos</small></article>
+      </div>
+      <div class="section-title compact"><div><span class="eyebrow teal">PRÓXIMOS DESTAQUES</span><h2>Seu roteiro em resumo</h2></div></div>
+      <div id="homeHighlights" class="stack"></div>
+      <div class="tip-box"><span>💡</span><div><b>Dica importante</b><p>Confira a tábua de marés antes de ir à Praia do Espelho. A experiência das piscinas naturais depende da maré.</p></div></div>
+      <div class="notice"><b>Sobre os valores</b><p>Os custos são estimativas de planejamento para duas pessoas, não cotações garantidas. Confirme tarifas, horários e disponibilidade perto da viagem.</p></div>
+    </section>
+
+    <section id="view-itinerary" class="view">
+      <div class="section-title"><div><span class="eyebrow teal">07–14 JANEIRO 2027</span><h2>Roteiro da viagem</h2></div></div>
+      <p class="intro">Toque em um dia para ver a programação e os custos previstos para o casal.</p>
+      <div id="dayList" class="day-list"></div>
+      <div id="dayDetail" class="day-detail"></div>
+    </section>
+
+    <section id="view-stays" class="view">
+      <div class="section-title"><div><span class="eyebrow teal">ONDE VOCÊ VAI FICAR</span><h2>Suas hospedagens</h2></div></div>
+      <article class="stay-card">
+        <div class="stay-photo arraial-photo"><span>🌴 ARRAIAL D'AJUDA</span></div>
+        <div class="stay-content"><span class="date-pill">07/01 a 12/01 · 5 noites</span><h3>Morada Pedra da Lua</h3><p>Rua Pedra da Lua, 606, Arraial d'Ajuda, Porto Seguro – BA, 45816-000.</p><div class="amenities"><span>🏊 Piscina</span><span>🚗 Estacionamento</span><span>📶 Wi-Fi</span></div><a class="outline-link" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Morada+Pedra+da+Lua+Rua+Pedra+da+Lua+606+Arraial+d%27Ajuda">Abrir no Google Maps ↗</a><p class="tiny">Praia de Araçaípe fica a poucos minutos a pé, conforme referência do anúncio. Confirme com a pousada o horário de check-in e as comodidades do quarto.</p></div>
+      </article>
+      <article class="stay-card">
+        <div class="stay-photo porto-photo"><span>🌅 PORTO SEGURO</span></div>
+        <div class="stay-content"><span class="date-pill">12/01 a 14/01 · 2 noites</span><h3>Pousada Sonho Meu</h3><p>Rua XV de Novembro, 86, Centro, Porto Seguro – BA, 45810-000.</p><div class="amenities"><span>🚗 Estacionamento</span><span>🍽️ Cozinha compartilhada</span></div><a class="outline-link" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Pousada+Sonho+Meu+Rua+XV+de+Novembro+86+Porto+Seguro">Abrir no Google Maps ↗</a><p class="tiny">Confirme diretamente se o café da manhã está incluído e os horários de entrada e saída.</p></div>
+      </article>
+      <div class="notice"><b>Troca de hospedagem · 12/01</b><p>Planeje a travessia de balsa de Arraial para Porto Seguro e o transporte até a pousada. Tarifas e tempos podem variar.</p></div>
+    </section>
+
+    <section id="view-places" class="view">
+      <div class="section-title"><div><span class="eyebrow teal">EXPLORE A REGIÃO</span><h2>Mapa e lugares</h2></div></div>
+      <p class="intro">Abra cada local no Google Maps para conferir rota, trânsito e localização atualizada.</p>
+      <div id="placeList" class="place-list"></div>
+      <div class="notice"><b>Deslocamentos</b><p>O roteiro considera transporte misto. Não inclui aluguel de carro durante toda a viagem. Confira operação da balsa, vans e transporte local antes de sair.</p></div>
+    </section>
+
+    <section id="view-expenses" class="view">
+      <div class="section-title"><div><span class="eyebrow teal">CONTROLE DO CASAL</span><h2>Meus gastos</h2></div></div>
+      <div class="expense-summary"><span class="muted light">TOTAL REGISTRADO</span><strong id="expenseTotal">R$ 0,00</strong><small>Meta geral: R$ 2.200,00</small></div>
+      <form id="expenseForm" class="expense-form">
+        <label>Descrição<input id="expenseName" maxlength="60" placeholder="Ex.: almoço na praia" required></label>
+        <div class="form-row"><label>Valor (R$)<input id="expenseValue" type="number" min="0.01" step="0.01" placeholder="0,00" required></label><label>Categoria<select id="expenseCategory"><option>Alimentação</option><option>Transporte</option><option>Passeios</option><option>Compras</option><option>Outros</option></select></label></div>
+        <label>Data<input id="expenseDate" type="date" min="2027-01-07" max="2027-01-14" value="2027-01-07"></label>
+        <button class="primary-btn" type="submit">＋ Adicionar gasto</button>
+      </form>
+      <div class="section-title compact"><div><span class="eyebrow teal">HISTÓRICO</span><h2>Despesas registradas</h2></div><button id="exportBtn" class="text-btn">Exportar CSV</button></div>
+      <div id="expenseList" class="expense-list"></div>
+      <div class="notice"><b>Seus dados</b><p>Os registros ficam salvos neste navegador, neste aparelho. Não limpe os dados do navegador sem exportar uma cópia. O histórico não sincroniza automaticamente com outro celular.</p></div>
+    </section>
+  </main>
+
+  <footer>Feito para curtir a Bahia 🌴<small>Meu Guia Porto Seguro 2027</small></footer>
+  <div id="toast" role="status" aria-live="polite"></div>
+  <script src="app.js"></script>
+  <script>
+    if ("serviceWorker" in navigator) {
+      window.addEventListener("load", () => navigator.serviceWorker.register("./sw.js").catch(() => {}));
+    }
+  </script>
+</body>
+</html>
